@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
     // Function to render tasks from the tasks array
-    function renderTasks() {
+    function loadTasks() {
         // Clear existing tasks in the DOM
         taskList.innerHTML = '';
         
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Load and render tasks on page load
-    renderTasks();
+    loadTasks();
 
     // Attach Event Listeners
     addButton.addEventListener('click', addTask);
